@@ -39,7 +39,7 @@ Import `qrcode` in your program. The Usage example shows how to make and save an
 
 ## Input Assumptions
 
-The content fits in a QR code. The filename is valid and its folder exists. Encode URL characters such as `?`, `&`, and `=` exactly as entered.
+The content fits in a QR code. The filename is valid and its folder exists. 
 
 ## Sample Output
 
@@ -57,4 +57,4 @@ Saved programming-fundamentals.png
 
 ## Submission
 
-Commit and push to `development`. Review and merge your pull request into `main`, then submit your repository URL in Canvas.
+Submit a link of your open PR to the Canvas assignment page. 
