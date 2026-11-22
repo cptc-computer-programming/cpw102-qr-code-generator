@@ -1,6 +1,7 @@
 # QR Code Generator
-
-![alt text](image.png)
+<p align=center>
+    <img src="cat-qr.png" alt="GitHub QR code" width="400">
+</p>
 
 Build a Python program that turns a URL or short message into a QR code you can scan.
 
