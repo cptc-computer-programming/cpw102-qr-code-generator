@@ -18,18 +18,31 @@ Complete the starter functions in `make_qr.py`.
 
 ## Library Setup
 
-In your project folder, run:
+In your project folder, create a virtual environment:
+
+```
+python -m venv .venv
+```
+
+Activate it:
+
+```
+.\.venv\Scripts\Activate.ps1  
+```
+
+Install libraries:
 
 ```
 python -m pip install -r requirements.txt
 ``` 
+
 Import `qrcode` in your program. The Usage example shows how to make and save an image: [qrcode documentation](https://pypi.org/project/qrcode/#usage)
 
 ## Requirements
 
 1. Ask for a URL or short message, then an output filename. Repeat either prompt if the response is empty or contains only whitespace.
 2. Strip surrounding whitespace from both responses. Preserve spaces and punctuation within the content, including URL query parameters.
-3. Use `qrcode` to encode the content and save a PNG. Append `.png` only if the filename doesn't already end in that extension, ignoring case. For example, `lab.PNG` stays `lab.PNG`.
+3. Use `qrcode` to encode the content and save a PNG in the `output` folder beside `make_qr.py`. The supplied helper code creates this folder if needed. Append `.png` only if the filename doesn't already end in that extension, ignoring case. For example, `lab.PNG` stays `lab.PNG`.
 4. After saving, print `Saved ` followed by the final filename.
 
 
@@ -39,7 +52,7 @@ Import `qrcode` in your program. The Usage example shows how to make and save an
 
 ## Input Assumptions
 
-The content fits in a QR code. The filename is valid and its folder exists. 
+The content fits in a QR code. Enter a valid filename without a folder path.
 
 ## Sample Output
 
@@ -51,7 +64,7 @@ Saved programming-fundamentals.png
 
 ## Check Your Work
 
-- Run `python make_qr.py` with the sample inputs. Scan the image and check that both query parameters are present.
+- Run `python make_qr.py` with the sample inputs. Open the image in `output` and scan it to check the link.
 - Try `Meet in lab 204` with the filename `lab.PNG`. Check the exact filename and scan the message.
 - Press Enter at either prompt. Confirm that the program asks again.
 

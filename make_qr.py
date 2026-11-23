@@ -1,3 +1,6 @@
+from pathlib import Path
+
+
 def get_input(prompt):
     """Repeat the supplied prompt until input is not empty or whitespace-only.
 
@@ -17,11 +20,17 @@ def png_filename(filename):
 
 
 def save_qr(content, filename):
-    """Use qrcode to encode the exact content and save a PNG at filename.
+    """Use qrcode to encode the exact content and save a PNG in output/.
 
-    The filename includes its extension and may include an existing folder.
-    Do not prompt or print. Return nothing (None).
+    The filename includes its extension, with no folder path. The helper
+    code creates output/ beside this script. Save the image to output_path.
+     Return nothing (None).
     """
+    output_folder = Path(__file__).resolve().parent / "output"
+    output_folder.mkdir(exist_ok=True)
+    output_path = output_folder / filename
+
+    # TODO: Create the QR code and save it to output_path.
     pass
 
 
